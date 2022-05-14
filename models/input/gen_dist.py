@@ -22,7 +22,7 @@ nsamples = np.sum(count)
 list_sd = []
 cumm_sd = []
 cumm_count = 0.
-for i in xrange(len(count)):
+for i in range(len(count)):
     cumm_count += count[i]
     cumm = float(cumm_count) / nsamples
     list_sd.append(i)
@@ -38,7 +38,7 @@ for cumm in cumm_sd[:-1]:
     cumm_sd_str += str(cumm) + ", "
 cumm_sd_str += str(cumm_sd[-1]) + "\n"
 
-access_list = [i for i in xrange(table_size//cacheline_size)]
+access_list = [i for i in range(table_size//cacheline_size)]
 access_str = ""
 for access in access_list[:-1]:
     access_str += str(access) + ", "
